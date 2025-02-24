@@ -6,6 +6,7 @@ import NewArrivalsCarousel from "@/components/NewArrivalsCarousel";
 import Poster from "@/components/Poster";
 import Brands from "@/components/Brands";
 import Testimonial from "@/components/Testimonial";
+import DownloadApp from "@/components/DownloadApp";
 
 export default function Home() {
   const sneakers = [
@@ -110,6 +111,7 @@ export default function Home() {
       <Poster />
       <Brands />
       <Testimonial />
+      <DownloadApp />
     </div>
   );
 }

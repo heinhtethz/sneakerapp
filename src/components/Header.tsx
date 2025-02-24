@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <div className="flex items-center justify-around w-full h-[89px] border-b-2 border-gray-300">
       <div>
-        <img src="/logo.png"></img>
+        <img src="/logo.svg"></img>
       </div>
       <div className="flex gap-x-3">
         {Links.map((item) => {
