@@ -1,9 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import SearchInput from "./SearchInput";
 import { GoPerson, GoHeart } from "react-icons/go";
 import { FiShoppingBag } from "react-icons/fi";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
+
   const Links = [
     { name: "Nike", route: "/nike" },
     { name: "Adidas", route: "/adidas" },
@@ -22,13 +27,17 @@ const Header = () => {
       <div>
         <img src="/logo.svg"></img>
       </div>
-      <div className="flex gap-x-3">
+      <div className="flex gap-x-8 font-[600] text-md">
         {Links.map((item) => {
           return (
             <Link
               href={item.route}
               key={item.name}
-              className="mr-4 font-semibold text-md hover:text-green-500 hover:border-green-500 hover:border-b-2"
+              className={
+                pathname === item.route
+                  ? "border-b-[3px] border-green-500 text-green-500"
+                  : "border-b-[3px] border-white hover:text-green-500 hover:border-green-500"
+              }
             >
               {item.name}
             </Link>
