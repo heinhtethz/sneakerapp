@@ -14,15 +14,15 @@ interface ShoesProp {
 }
 
 interface Props {
-  shoeData: ShoesProp[];
+  shoesData: ShoesProp[];
   posterImage: string;
   title: string;
 }
 
-const PagesByBrands = ({ shoeData, posterImage, title }: Props) => {
-  const [hovered, setHovered] = useState(shoeData.map(() => false));
+const PagesByBrands = ({ shoesData, posterImage, title }: Props) => {
+  const [hovered, setHovered] = useState(shoesData.map(() => false));
 
-  const firstThreeShoes = shoeData.filter((item) => {
+  const firstThreeShoes = shoesData.filter((item) => {
     return item.id <= 3;
   });
 
@@ -45,8 +45,8 @@ const PagesByBrands = ({ shoeData, posterImage, title }: Props) => {
     <div className="">
       <img src={posterImage} className="w-full"></img>
       <FilterBar name={title} />
-      <div className="w-[85%] mx-auto grid grid-cols-4 mt-10">
-        {shoeData.map((items, index) => {
+      <div className="w-[85%] mx-auto grid grid-cols-4 mt-10 gap-y-12">
+        {shoesData.map((items, index) => {
           return (
             <div
               className="w-[280px] h-[412px]"
@@ -54,8 +54,8 @@ const PagesByBrands = ({ shoeData, posterImage, title }: Props) => {
               onMouseEnter={() => hovering(index)}
               onMouseLeave={() => notHovering(index)}
             >
-              <div className="h-[250px] bg-[#f6f6f6] rounded-lg">
-                <img src={items.image} className="w-[250px] mx-auto" />
+              <div className="bg-[#f6f6f6] rounded-lg">
+                <img src={items.image} className="w-[100%] h-[250px] mx-auto" />
               </div>
 
               <motion.div
@@ -69,17 +69,22 @@ const PagesByBrands = ({ shoeData, posterImage, title }: Props) => {
                       key={items.id}
                       className={
                         index === 0
-                          ? "rounded-lg w-16 h-16 bg-[#f6f6f6] border-slate-800 border-2"
-                          : "rounded-lg w-16 h-16 bg-[#f6f6f6]"
+                          ? "rounded-lg w-14 h-14 bg-[#f6f6f6] border-slate-800 border-2"
+                          : "rounded-lg w-14 h-14 bg-[#f6f6f6]"
                       }
                     >
-                      <img src={items.image} className="w-14 m-auto" />
+                      <img
+                        src={items.image}
+                        className="w-14 m-auto rounded-md"
+                      />
                     </div>
                   );
                 })}
-                <div className="rounded-lg w-16 h-16 bg-[#f6f6f6] text-center p-5 font-bold">
-                  {shoeData.length - 3}+
-                </div>
+                {items.color > 3 && (
+                  <div className="rounded-lg w-16 h-16 bg-[#f6f6f6] text-center p-5 font-semibold text-xl">
+                    {items.color - 3}+
+                  </div>
+                )}
               </motion.div>
 
               <motion.div

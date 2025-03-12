@@ -88,7 +88,7 @@ const NikePage = () => {
   return (
     <div>
       <PagesByBrands
-        shoeData={NikeShoes}
+        shoesData={NikeShoes}
         posterImage="/nikeCoverImage.png"
         title="Nike"
       />
