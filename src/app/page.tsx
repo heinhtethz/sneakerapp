@@ -106,7 +106,7 @@ export default function Home() {
         <img src="/shoes.png" className="w-full"></img>
         <ShopOurIconsCarousel sneakers={sneakers} />
         <img src="/bottomCurve.svg" className="w-full" />
-        <NewArrivalsCarousel sneakers={newArrivals} />
+        <NewArrivalsCarousel sneakers={newArrivals} title="New Arrivals" />
       </div>
       <Poster />
       <Brands />

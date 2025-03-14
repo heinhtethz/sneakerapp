@@ -7,13 +7,15 @@ interface Sneakers {
   image: string;
   brand: string;
   price: number;
+  color?: number;
 }
 
 interface Props {
   sneakers: Sneakers[];
+  title: string;
 }
 
-const NewArrivalsCarousel = ({ sneakers }: Props) => {
+const NewArrivalsCarousel = ({ sneakers, title }: Props) => {
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
@@ -30,7 +32,7 @@ const NewArrivalsCarousel = ({ sneakers }: Props) => {
   return (
     <div className="mt-20 flex flex-col items-center py-10">
       <div className="flex justify-between w-[80%] mb-5">
-        <h3 className="text-[32px]">New Arrivals</h3>
+        <h3 className="text-[32px] font-bold">{title}</h3>
         <div className="flex  items-center gap-2">
           <button
             onClick={scrollLeft}
@@ -55,8 +57,12 @@ const NewArrivalsCarousel = ({ sneakers }: Props) => {
         {sneakers.map((item, index) => {
           return (
             <motion.div key={index}>
-              <div className="relative bg-[#f6f6f6] w-[488px] p-6 rounded-lg flex items-center justify-center">
-                <img src={item.image} alt="Air Max Shoe" className="" />
+              <div className="relative bg-[#f6f6f6] w-[488px] h-[488px] p-6 rounded-lg flex items-center justify-center">
+                <img
+                  src={item.image}
+                  alt="Air Max Shoe"
+                  className="w-[400px]"
+                />
               </div>
               <div>
                 <h1 className="font-bold text-lg">{item.name}</h1>
