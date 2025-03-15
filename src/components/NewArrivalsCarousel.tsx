@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 
-interface Sneakers {
+export interface Sneakers {
   name: string;
   image: string;
   brand: string;
@@ -57,11 +57,11 @@ const NewArrivalsCarousel = ({ sneakers, title }: Props) => {
         {sneakers.map((item, index) => {
           return (
             <motion.div key={index}>
-              <div className="relative bg-[#f6f6f6] w-[488px] h-[488px] p-6 rounded-lg flex items-center justify-center">
+              <div className="relative bg-[#f6f6f6] w-[488px] h-[488px] rounded-lg flex items-center justify-center">
                 <img
                   src={item.image}
                   alt="Air Max Shoe"
-                  className="w-[400px]"
+                  className="w-[488px]"
                 />
               </div>
               <div>
