@@ -39,13 +39,6 @@ const PagesByBrands = ({ shoesData, posterImage, title }: Props) => {
     });
   };
 
-  const notHovering = (index: number) => {
-    setHovered((prev) => {
-      const newState = [...prev];
-      newState[index] = !newState[index];
-      return newState;
-    });
-  };
   return (
     <div className="">
       <img src={posterImage} className="w-full"></img>
@@ -57,7 +50,7 @@ const PagesByBrands = ({ shoesData, posterImage, title }: Props) => {
               <div
                 className="w-[280px] h-[412px]"
                 onMouseEnter={() => hovering(index)}
-                onMouseLeave={() => notHovering(index)}
+                onMouseLeave={() => hovering(index)}
               >
                 <div className="bg-[#f6f6f6] rounded-lg">
                   <img

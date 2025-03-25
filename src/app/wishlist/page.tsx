@@ -1,6 +1,7 @@
 "use client";
 
 import NewArrivalsCarousel from "@/components/NewArrivalsCarousel";
+import { color } from "framer-motion";
 import React from "react";
 
 const WishListData = [
@@ -29,6 +30,7 @@ const RecentlyViewedData = [
     image: "https://tinyurl.com/bdh4t3pf",
     brand: "Soccer",
     size: 7.5,
+    color: 2,
     price: 110,
   },
   {
@@ -38,6 +40,7 @@ const RecentlyViewedData = [
     brand: "Football",
     size: 7.5,
     price: 150,
+    color: 3,
   },
   {
     id: 3,
@@ -46,6 +49,7 @@ const RecentlyViewedData = [
     brand: "Football",
     size: 7.5,
     price: 49.99,
+    color: 4,
   },
   {
     id: 4,
@@ -54,6 +58,7 @@ const RecentlyViewedData = [
     brand: "Soccer",
     size: 7.5,
     price: 230,
+    color: 1,
   },
 ];
 

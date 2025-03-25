@@ -1,12 +1,13 @@
 "use client";
 
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
 import NewArrivalsCarousel, {
   Sneakers,
 } from "@/components/NewArrivalsCarousel";
 import { ShoesProp } from "./PagesByBrands";
+import { useNavigate } from "react-router";
 
 export const ShoeSizes = [
   "3",
@@ -41,6 +42,7 @@ interface Props {
 const ShoeDetailPage = ({ shoes, youMightAlsoLikeShoes }: Props) => {
   const { id } = useParams();
   const [arrow, setArrow] = useState(false);
+  const router = useRouter();
 
   const validShoeById = shoes.find(
     (item) => item.id === Number(id)
@@ -59,11 +61,10 @@ const ShoeDetailPage = ({ shoes, youMightAlsoLikeShoes }: Props) => {
                 return (
                   <img
                     key={index}
+                    tabIndex={index}
                     src={item}
                     className={
-                      index === 0
-                        ? "border-2 border-black w-[60px] h-[60px] mb-4 rounded-[8px] bg-[#f6f6f6]"
-                        : "w-[60px] h-[60px] mb-4 rounded-[8px] bg-[#f6f6f6]"
+                      "w-[60px] h-[60px] mb-4 rounded-[8px] bg-[#f6f6f6] focus:border-2 focus:border-black"
                     }
                   ></img>
                 );
@@ -80,15 +81,13 @@ const ShoeDetailPage = ({ shoes, youMightAlsoLikeShoes }: Props) => {
             <div className="flex mt-7">
               {firstThreeShoes.map((item, index) => {
                 return (
-                  <img
+                  <div
                     key={index}
-                    src={item.image}
-                    className={
-                      index === 0
-                        ? "border-2 border-black w-[60px] h-[60px] mr-2 rounded-[8px] bg-[#f6f6f6]"
-                        : "w-[60px] h-[60px] mr-2 rounded-[8px] bg-[#f6f6f6]"
-                    }
-                  />
+                    tabIndex={item.id}
+                    className="w-[60px] h-[60px] mr-2 rounded-[8px] bg-[#f6f6f6] focus:border-2 focus:border-black"
+                  >
+                    <img src={item.image} className={""} />
+                  </div>
                 );
               })}
             </div>
@@ -96,8 +95,8 @@ const ShoeDetailPage = ({ shoes, youMightAlsoLikeShoes }: Props) => {
               {ShoeSizes.map((size, index) => (
                 <button
                   key={index}
-                  className="w-[155px] h-[46px] border-[1px] border-gray-300 rounded-[8px] hover:bg-green-500
-              hover:text-white"
+                  className="w-[155px] h-[46px] border-[1px] border-gray-300 rounded-[8px] focus:bg-green-500
+              focus:text-white"
                 >
                   UK {size}
                 </button>
@@ -125,7 +124,10 @@ const ShoeDetailPage = ({ shoes, youMightAlsoLikeShoes }: Props) => {
               )}
             </div>
             <div className="flex justify-between mt-8">
-              <button className="w-[230px] h-[50px] border-black border-2 rounded-full">
+              <button
+                onClick={() => router.push("/wishlist")}
+                className="w-[230px] h-[50px] border-black border-2 rounded-full"
+              >
                 Favourite
               </button>
               <button className="w-[230px] h-[50px] bg-black text-white rounded-full">
