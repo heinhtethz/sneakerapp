@@ -56,7 +56,7 @@ const NewArrivalsCarousel = ({ sneakers, title }: Props) => {
       >
         {sneakers.map((item, index) => {
           return (
-            <motion.div key={index}>
+            <div key={index}>
               <div className="relative bg-[#f6f6f6] w-[488px] h-[488px] rounded-lg flex items-center justify-center">
                 <img
                   src={item.image}
@@ -67,9 +67,12 @@ const NewArrivalsCarousel = ({ sneakers, title }: Props) => {
               <div>
                 <h1 className="font-bold text-lg">{item.name}</h1>
                 <p className="text-gray-400 text-sm">{item.brand}</p>
+                {item.color && (
+                  <p className="text-gray-400 text-sm">{item.color} Color</p>
+                )}
                 <h3 className="font-bold text-sm">${item.price}</h3>
               </div>
-            </motion.div>
+            </div>
           );
         })}
       </div>
