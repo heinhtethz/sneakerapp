@@ -1,10 +1,11 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { AiOutlineDelete } from "react-icons/ai";
 import { FaPlus, FaMinus } from "react-icons/fa6";
 
-const ItemsInCart = [
+export const ItemsInCart = [
   {
     id: 1,
     name: "Nike Air Max Plus",
@@ -35,6 +36,7 @@ const ItemsInCart = [
 ];
 
 const CartPage = () => {
+  const router = useRouter();
   const [quantities, setQuantities] = useState(ItemsInCart.map(() => 1));
   const [itemPrice, setItemPrice] = useState(
     ItemsInCart.map((item) => item.price)
@@ -124,6 +126,14 @@ const CartPage = () => {
         <div className="flex justify-between text-[18px] font-semibold mt-10">
           <p>Subtotal</p>
           <p className="w-[20%]">$ {totalPrice.toFixed(2)}</p>
+        </div>
+        <div className="w-[30%] mx-auto  bg-black text-white rounded-full px-4 py-2 text-center mt-10 hover:scale-110">
+          <button
+            className=""
+            onClick={() => router.push("/checkout/userInfomation")}
+          >
+            Checkout
+          </button>
         </div>
       </div>
     </div>

@@ -7,7 +7,6 @@ import NewArrivalsCarousel, {
   Sneakers,
 } from "@/components/NewArrivalsCarousel";
 import { ShoesProp } from "./PagesByBrands";
-import { useNavigate } from "react-router";
 
 export const ShoeSizes = [
   "3",
@@ -130,7 +129,10 @@ const ShoeDetailPage = ({ shoes, youMightAlsoLikeShoes }: Props) => {
               >
                 Favourite
               </button>
-              <button className="w-[230px] h-[50px] bg-black text-white rounded-full">
+              <button
+                onClick={() => router.push("/cart")}
+                className="w-[230px] h-[50px] bg-black text-white rounded-full"
+              >
                 Add to Bag
               </button>
             </div>
