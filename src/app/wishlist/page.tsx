@@ -1,7 +1,7 @@
 "use client";
 
 import NewArrivalsCarousel from "@/components/NewArrivalsCarousel";
-import { color } from "framer-motion";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const WishListData = [
@@ -18,7 +18,7 @@ const WishListData = [
     name: "Air Jordan 4RM",
     image: "/airJordan4RM.png",
     brand: "Jordan",
-    color: 3,
+    size: 8,
     price: 84.99,
   },
 ];
@@ -63,6 +63,7 @@ const RecentlyViewedData = [
 ];
 
 const WishlistPage = () => {
+  const router = useRouter();
   return (
     <div>
       {/* Header */}
@@ -109,7 +110,10 @@ const WishlistPage = () => {
                   <button className="text-xs w-[100px] h-[32px] rounded-full border-[1px] border-black mr-4">
                     Remove
                   </button>
-                  <button className="bg-black text-white text-xs w-[100px] h-[32px] rounded-full ">
+                  <button
+                    className="bg-black text-white text-xs w-[100px] h-[32px] rounded-full"
+                    onClick={() => router.push("/cart")}
+                  >
                     Add to Bag
                   </button>
                 </td>
