@@ -2,7 +2,7 @@
 
 import { inputCss } from "@/utils/page";
 import React from "react";
-import { ItemsInCart } from "../userInfomation/page";
+import { ItemsInCart } from "../userInformation/page";
 import { useRouter } from "next/navigation";
 
 const AvailablePaymentMethods = [
@@ -61,7 +61,7 @@ const PaymentMethod = () => {
         <div className="grid grid-cols-2 mt-14 gap-4">
           <button
             className="p-3 border-black border-[1px] rounded-full"
-            onClick={() => router.push("/userInformation")}
+            onClick={() => router.push("/checkout/userInformation")}
           >
             Prev
           </button>
