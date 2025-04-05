@@ -130,7 +130,7 @@ const CartPage = () => {
         <div className="w-[30%] mx-auto  bg-black text-white rounded-full px-4 py-2 text-center mt-10 hover:scale-110">
           <button
             className=""
-            onClick={() => router.push("/checkout/userInfomation")}
+            onClick={() => router.push("/checkout/userInformation")}
           >
             Checkout
           </button>

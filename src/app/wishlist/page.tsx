@@ -23,7 +23,7 @@ const WishListData = [
   },
 ];
 
-const RecentlyViewedData = [
+export const RecentlyViewedData = [
   {
     id: 1,
     name: "Future 7 Pro Firm Ground/Artificial Ground",
