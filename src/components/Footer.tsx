@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-[#F6F6F6] h-[526px] mt-28 flex flex-col justify-center">
-      <div className="flex justify-around pt-16">
+    <div className="bg-[#F6F6F6] w-full min-h-[526px] mt-28 flex flex-col justify-between">
+      <div className="flex justify-around flex-wrap pt-16 px-5">
         <div className="w-[384px]">
           <img src="/logo.svg"></img>
           <p className="text-[#4F4F4F] mt-8">
@@ -12,14 +12,14 @@ const Footer = () => {
             place for fast and easy shopping.
           </p>
         </div>
-        <div>
+        <div className="mt-10 sm:mt-0">
           <h3 className="font-bold text-xl mb-7">Company</h3>
           <ul className="text-[#4F4F4F] flex flex-col gap-y-2">
             <li>About</li>
             <li>Contact Us</li>
           </ul>
         </div>
-        <div>
+        <div className="mt-10 sm:mt-0">
           <h3 className="font-bold text-xl mb-7">Brands</h3>
           <ul className="text-[#4F4F4F] flex flex-col gap-y-2">
             <li>Nike</li>
@@ -28,7 +28,7 @@ const Footer = () => {
             <li>Converse</li>
           </ul>
         </div>
-        <div className="w-[280px]">
+        <div className="w-[280px] mt-10 md:mt-0">
           <h3 className="font-bold text-xl mb-7">Download Our App</h3>
           <p className="text-[#4F4F4F]">
             Get instant access to exclusive features for FREE!
@@ -50,7 +50,7 @@ const Footer = () => {
       </div>
       <div className="bg-[#E5E5E5] h-[1px] w-[90%] mx-auto mt-8"></div>
       <div className="flex justify-between w-[90%] mx-auto mt-8 text-[#525252] text-sm">
-        <p>Copyrights ©2024 PERFECTPAIR. Build by Hein Htet Zaw.</p>
+        <p>Copyrights ©2024 PERFECTPAIR. Build by Castiel.</p>
         <div className="flex gap-x-5">
           <p>Privacy Policy</p>
           <p>Terms & conditions</p>

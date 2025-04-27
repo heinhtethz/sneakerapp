@@ -37,7 +37,7 @@ const Testimonial = () => {
   return (
     <div className="w-[90%] mx-auto mb-20 rounded-3xl">
       <h1 className="text-[32px] font-bold mt-20 mb-6">What they says</h1>
-      <div className="bg-[#f6f6f6] relative px-[128px] py-[64px] animate-fade-in-up">
+      <div className="bg-[#f6f6f6] relative px-5 lg:px-[128px] py-[64px] animate-fade-in-up">
         <img src="/quotation.svg" className="absolute top-[-30px] right-0" />
 
         <h2 className="text-[#525252] font-bold text-xl font-serif mb-8 ">

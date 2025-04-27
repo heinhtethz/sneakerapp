@@ -53,7 +53,7 @@ const ShopOurIconsCarousel = ({ sneakers }: Props) => {
         {sneakers.map((item, index) => {
           return (
             <motion.div
-              className="relative bg-[#262626] p-6 rounded-lg min-w-[420px] h-[250px] flex items-center justify-center"
+              className="relative bg-[#262626] p-6 rounded-lg min-w-[320px] h-[250px] flex items-center justify-center"
               key={index}
             >
               <img src={item.image} alt="Air Max Shoe" className="" />

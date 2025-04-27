@@ -23,7 +23,10 @@ const DownloadApp = () => {
             <img src="/playStore.png"></img>
           </div>
         </div>
-        <img src="/phone.png" className="absolute right-16 top-[-133px]"></img>
+        <img
+          src="/phone.png"
+          className="hidden lg:flex absolute right-16 top-[-133px]"
+        ></img>
       </div>
     </div>
   );
