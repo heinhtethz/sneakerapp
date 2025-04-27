@@ -57,7 +57,7 @@ const NewArrivalsCarousel = ({ sneakers, title }: Props) => {
         {sneakers.map((item, index) => {
           return (
             <div key={index}>
-              <div className="relative bg-[#f6f6f6] w-[488px] h-[488px] rounded-lg flex items-center justify-center">
+              <div className="relative bg-[#f6f6f6] w-[300px] h-[300px] rounded-lg flex items-center justify-center">
                 <img
                   src={item.image}
                   alt="Air Max Shoe"

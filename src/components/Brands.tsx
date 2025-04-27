@@ -12,7 +12,7 @@ const Brands = () => {
   return (
     <div className="mt-32">
       <h1 className="flex justify-center font-bold text-3xl mb-8">Brands</h1>
-      <div className="flex justify-between items-center gap-8 w-[70%] mx-auto">
+      <div className="flex justify-between items-center flex-wrap gap-8 w-[90%] lg:w-[70%] mx-auto">
         {brands.map((item, index) => {
           return (
             <Link href={item.route} key={index}>
