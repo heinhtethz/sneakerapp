@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-[#E5E5E5] h-[1px] w-[90%] mx-auto mt-8"></div>
-      <div className="flex justify-between w-[90%] mx-auto mt-8 text-[#525252] text-sm">
+      <div className="flex justify-between items-center w-[90%] m-auto py-5 text-[#525252] text-sm">
         <p>Copyrights ©2024 PERFECTPAIR. Build by Castiel.</p>
         <div className="flex gap-x-5">
           <p>Privacy Policy</p>

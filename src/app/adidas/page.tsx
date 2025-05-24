@@ -4,7 +4,7 @@ export const AdidasShoes = [
   {
     id: 1,
     name: "Dropset 3 GFX Shoes",
-    image: "https://tinyurl.com/bdz29hp8",
+    image: "/dropset3gfx.png",
     detailImage: [
       "https://shorturl.at/GgGEt",
       "https://tinyurl.com/4b2azrm2",
@@ -22,7 +22,7 @@ export const AdidasShoes = [
   {
     id: 2,
     name: "Dropset 3 Shoes",
-    image: "https://tinyurl.com/uaz37f59",
+    image: "/dropset3.png",
     detailImage: [
       "https://shorturl.at/GgGEt",
       "https://tinyurl.com/4b2azrm2",
@@ -40,7 +40,7 @@ export const AdidasShoes = [
   {
     id: 3,
     name: "Gazelle Indoor Shoes",
-    image: "https://tinyurl.com/y7m3pck5",
+    image: "/gazelle.png",
     detailImage: [
       "https://shorturl.at/GgGEt",
       "https://tinyurl.com/4b2azrm2",
@@ -58,7 +58,7 @@ export const AdidasShoes = [
   {
     id: 4,
     name: "Ultraboost 5X Shoes",
-    image: "https://tinyurl.com/2y7panwd",
+    image: "/ultraboost.png",
     detailImage: [
       "https://shorturl.at/GgGEt",
       "https://tinyurl.com/4b2azrm2",

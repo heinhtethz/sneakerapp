@@ -23,7 +23,7 @@ const FilterBar = ({ name }: FilterBarProps) => {
   ];
   return (
     <div>
-      <div className="flex justify-between w-[85%] mx-auto mt-10 items-center">
+      <div className="flex justify-between w-[85%] mx-auto mt-10 items-center flex-wrap">
         <span className="text-lg font-bold">{name}</span>
         <span></span>
         <div className="flex gap-x-8 font-[600] text-md">

@@ -53,7 +53,7 @@ const ShoeDetailPage = ({ shoes, youMightAlsoLikeShoes }: Props) => {
   return (
     <div className="mt-8">
       <div className="max-w-[1216px] mx-auto">
-        <div className="flex justify-evenly">
+        <div className="flex justify-evenly flex-wrap">
           <div>
             {validShoeById.detailImage &&
               validShoeById?.detailImage.map((item, index) => {
@@ -71,24 +71,20 @@ const ShoeDetailPage = ({ shoes, youMightAlsoLikeShoes }: Props) => {
           </div>
           <img
             src={validShoeById?.image}
-            className="w-[620px] h-[665px] bg-[#f6f6f6] "
+            className="w-[620px] h-[665px] bg-[#f6f6f6]"
           />
           <div>
             <h1 className="text-3xl font-bold">{validShoeById.name}</h1>
             <p className="text-[#525252] "> {validShoeById.brand} </p>
             <p className="font-bold mt-6">$ {validShoeById.price}</p>
-            <div className="flex mt-7">
-              {firstThreeShoes.map((item, index) => {
-                return (
-                  <div
-                    key={index}
-                    tabIndex={item.id}
-                    className="w-[60px] h-[60px] mr-2 rounded-[8px] bg-[#f6f6f6] focus:border-2 focus:border-black"
-                  >
-                    <img src={item.image} className={""} />
-                  </div>
-                );
-              })}
+            <div className="flex justify-between mt-8 font-semibold text-lg">
+              <p>Select Size</p>
+              <a
+                className="cursor-pointer hover:text-gray-400"
+                href="https://www.nike.com/sg/size-fit/unisex-footwear-mens-based"
+              >
+                Size Guide
+              </a>
             </div>
             <div className="grid grid-cols-3 gap-2 mt-8">
               {ShoeSizes.map((size, index) => (
