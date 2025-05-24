@@ -4,7 +4,7 @@ export const PumaShoes = [
   {
     id: 1,
     name: "Suede XL Sneakers",
-    image: "https://tinyurl.com/b2d47475",
+    image: "/suedexl.png",
     detailImage: [
       "https://shorturl.at/GgGEt",
       "https://tinyurl.com/4b2azrm2",
@@ -22,7 +22,7 @@ export const PumaShoes = [
   {
     id: 2,
     name: "Suede Terrace Sneakers",
-    image: "https://tinyurl.com/2enwvh9p",
+    image: "/suedeTerrace.png",
     detailImage: [
       "https://shorturl.at/GgGEt",
       "https://tinyurl.com/4b2azrm2",
@@ -40,7 +40,7 @@ export const PumaShoes = [
   {
     id: 3,
     name: "GV Special Sneakers",
-    image: "https://tinyurl.com/mpdad58j",
+    image: "/gvspecial.png",
     detailImage: [
       "https://shorturl.at/GgGEt",
       "https://tinyurl.com/4b2azrm2",
@@ -58,7 +58,7 @@ export const PumaShoes = [
   {
     id: 4,
     name: "Suede Classic Sneakers",
-    image: "https://tinyurl.com/bfbd9deu",
+    image: "/suedeClassic.png",
     detailImage: [
       "https://shorturl.at/GgGEt",
       "https://tinyurl.com/4b2azrm2",
